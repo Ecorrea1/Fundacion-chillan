@@ -1,16 +1,17 @@
 const welcomeUser = document.getElementById('hello-user');
 const message = document.getElementById('message-welcome');
-const userNameInput = user;
+const userNameInput = 'Emmanuel Correa';
 
 const hiUser = () => {
 
     welcomeUser.textContent = `Hola, ${ userNameInput }!`;
-    message.textContent = `Bienvenido a la plataforma de MOVIDA`
+    message.textContent = `Bienvenido a la plataforma de Fundacion x`
 
 }
 
 window.addEventListener("load", () => {
     // isSession();
-    // hiUser();
+    onLoadSite();
+    hiUser();
   }
 )

@@ -1,0 +1,88 @@
+@import 'loader.css';
+@import 'paginate.css';
+
+html{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: #FFD600;
+  color: black;
+}
+
+.fader{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.fader .message{
+  color: #FFD600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: message 1s alternate infinite ease-in-out
+}
+
+.container-search{
+  width: 85%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.btn-ingreso{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.btn{
+  margin-left: 2px;
+  background-color: black;
+  border-color: #FFD600;
+  color: white;
+  border-radius: 2rem;
+}
+
+.close{
+  opacity: 0;
+  transition: 1.5;
+}
+
+.hidden{
+  overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-search input{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .container-search select{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container-search button{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -5,7 +5,7 @@ const userNameInput = 'Emmanuel Correa';
 const hiUser = () => {
 
     welcomeUser.textContent = `Hola, ${ userNameInput }!`;
-    message.textContent = `Bienvenido a la plataforma de Fundacion x`
+    message.textContent = `Bienvenido a la plataforma de Fundacion Misael`
 
 }
 

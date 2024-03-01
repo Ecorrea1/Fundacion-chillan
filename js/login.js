@@ -18,8 +18,8 @@ function showAlert(message) {
   element.innerHTML = message;
 }
 function clearForm(){
-  inputEmail.value= "";
-  inputPass.value="";
+  inputEmail.value = "";
+  inputPass.value = "";
 }
 
 const sendSession = async ( data) => {  

@@ -4,6 +4,7 @@ class Header extends HTMLElement {
     this.attributesComponents = [
       this.name = 'Ingresa tu titulo',
       this.classname = 'navbar bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary" data-bs-theme="dark'
+      // this.classname = 'navbar navbar-expand-lg navbar-dark'
     ];
   }
   static get observedAttributes(){ return ['name', 'classname']; }
@@ -15,10 +16,10 @@ class Header extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
       <header>
-      <nav class="${this.classname}">
-          <div class="container-fluid">
+      <nav id="navBar" class="${this.classname}">
+          <div class="container">
             <a class="navbar-brand" id="url" href="/index.html">
-              <img src="assets/logo-fundacion.jpg" alt="${this.name}" width="70" height="32">
+              <img src="assets/logo-fundacion.jpg" alt="${this.name}" width="70" height="32" class="d-inline-block align-text-top img-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"></button>
             <div class="collapse navbar-collapse" id="navbarNav">

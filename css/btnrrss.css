@@ -1,0 +1,26 @@
+.button-flout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px; 
+  height: 64px; 
+  background: #49C958 none repeat scroll 0% 0%;
+  color: white; 
+  border-radius: 32px;
+  position: fixed;
+  right: 18px; 
+  bottom: 45px; 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px; 
+  z-index: 9999;
+  cursor: pointer;
+  font-weight: 600; 
+  transition: all 0.2s ease 0s; 
+  transform: scale(1);
+}
+  
+.button-flout img {
+  height: 40px; 
+  width: 40px; 
+  margin: 0; 
+  padding: 0;
+}

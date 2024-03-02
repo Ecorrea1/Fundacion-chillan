@@ -11,13 +11,10 @@
 
 
 const phone = '56933329406' //Sin el + para usar la APi de Whatapp
-
-
+const wtspApi = 'https://api.whatsapp.com/send?phone=56933329406&text=Hola,%20me%20gustaría%20más%20información%20sobre%20tu%20trabajo';
 
 const toggleMenu = ( id, enabled = false) => enabled ? document.getElementById( id ).classList.remove('d-none') : document.getElementById( id ).classList.add("d-none");
-
 const showBadgeBoolean = (enabled = 1) => `<span class="badge text-bg-${ enabled == 1 ? 'success' : 'danger' }">${ enabled ? 'ACTIVADO' : 'DESACTIVADO' }</span>`
-
 const showbtnCircle = (btns) => `<div class="btn-group" role="group">${ btns }</div>`
 
 function paginado( table, limit = 5,  bar = false, counter = true ){
@@ -185,9 +182,10 @@ async function onLoadSite() {
   // isSession();
   // showTitlesTable();
   // await showData();
-  const BtnRRSS = document.getElementById( 'btn-rrss' );
-  BtnRRSS.addEventListener('click', () => wspApi);
-  const fader = document.getElementById('fader');
-  fader.classList.add("close");
-  fader.style.display = 'none';
+  const wspLink = document.getElementById('link_wsp');
+  wspLink.href = wtspApi;
+  // BtnRRSS.addEventListener('click', () => wspApi());
+  // const fader = document.getElementById('fader');
+  // fader.classList.add("close");
+  // fader.style.display = 'none';
 }

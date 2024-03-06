@@ -135,6 +135,6 @@ function exportTableToPDF(tableID,  filename = 'registrosEnPdf' ) {
 const wspApi = () => `https://api.whatsapp.com/send?phone=${phone}`
 
 async function onLoadSite() {
-  const wspLink = document.getElementById('link_wsp');
-  wspLink.href = wtspApi;
+  // const wspLink = document.getElementById('link_wsp');
+  // wspLink.href = wtspApi;
 }

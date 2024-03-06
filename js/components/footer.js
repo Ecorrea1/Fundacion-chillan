@@ -3,9 +3,10 @@ class Footer extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.attributesComponents = [
-      this.copyright = '© Derechos Reservados',
+      this.copyright = 'Todos los derechos reservados',
       this.year = `${ new Date().getFullYear() }`,
-      this.company = 'FUNDACION MISAEL',
+      this.company = 'Fundacion Misael',
+      this.classname = 'footer',
       this.classnamemessage = 'copyright'
     ];
   }
@@ -36,7 +37,7 @@ class Footer extends HTMLElement {
   template() {
     return `
       <footer class="${ this.classname }">
-        <p class="${ this.classnamemessage }">${this.copyright} ${this.year} | <a class="navbar-brand" id="url" href="/index.html">  ${ this.company}</a> </p>
+        <p class="${ this.classnamemessage }">© ${this.year} ${ this.company}. Todos los derechos reservados.</p>
       </footer>
     `;
   }

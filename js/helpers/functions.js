@@ -1,30 +1,9 @@
-// const token = localStorage.getItem("token");
-// const email = localStorage.getItem('email');
-// const user = localStorage.getItem('name');
-// const userId = Number(localStorage.getItem('uid'));
-// const role = Number(localStorage.getItem('role'));
-// const country = Number(localStorage.getItem('country'));
-// const commission = localStorage.getItem('commission');
-// const category = localStorage.getItem('category');
-// const ubication = localStorage.getItem('ubication');
-// const product = localStorage.getItem('product');
-
-
 const phone = '56933329406' //Sin el + para usar la APi de Whatapp
 const wtspApi = 'https://api.whatsapp.com/send?phone=56933329406&text=Hola,%20me%20gustaría%20más%20información%20sobre%20tu%20trabajo';
 
 const toggleMenu = ( id, enabled = false) => enabled ? document.getElementById( id ).classList.remove('d-none') : document.getElementById( id ).classList.add("d-none");
 const showBadgeBoolean = (enabled = 1) => `<span class="badge text-bg-${ enabled == 1 ? 'success' : 'danger' }">${ enabled ? 'ACTIVADO' : 'DESACTIVADO' }</span>`
 const showbtnCircle = (btns) => `<div class="btn-group" role="group">${ btns }</div>`
-
-function paginado( table, limit = 5,  bar = false, counter = true ){
-  const options = {
-    numberPerPage: limit, 
-    goBar: bar, 
-    pageCounter: counter
-  };
-  paginate.init(table, options);
-}
 
 // Show options in select 
 const showOptions = async ( select, query ) => {
@@ -91,12 +70,6 @@ function validateAllfields( divInput, divError, fieldNumber = false ) {
     return false;
   }
 }
-const showTitlesTable = () => {
-  let titles = '';
-  for (const i in titlesTable ) titles += `<th>${ titlesTable[i] }</th>`;
-  tableTitles.innerHTML = `<tr>${ titles }</tr>`;
-}
-
 async function consulta( url ) {
   try {
     const response = await fetch(url).catch((error)=>{ console.log('Hubo un error: ', error )});
@@ -131,7 +104,6 @@ function exportTableToExcel(tableID, filename = ''){
     downloadLink.click();
   }
 }
-
 function exportTableToPDF(tableID,  filename = 'registrosEnPdf' ) {
   const doc = new jsPDF('p', 'mm', 'a4'); // A4 page in portrait mode
   doc.autoTable({
@@ -158,34 +130,11 @@ function exportTableToPDF(tableID,  filename = 'registrosEnPdf' ) {
   });
  
   doc.save(`${filename}.pdf`); // Save the PDF with a filename
- }
-
-function closeSession() {
-  localStorage.clear();
-  noLogin();
-}
-
-function isSession() {
-  if (!email && url !== `${url}/login.html`) return window.location.href = `${ url }/login.html`;
-}
-
-function noLogin() {
-  const urlLocation = location.href.replace(url, "");
-  ( token === null && urlLocation !== `${url}/login.html`) 
-  ? location.replace(`${ url }/login.html`)
-  : console.log("LOGEADO");
 }
 
 const wspApi = () => `https://api.whatsapp.com/send?phone=${phone}`
 
 async function onLoadSite() {
-  // isSession();
-  // showTitlesTable();
-  // await showData();
   const wspLink = document.getElementById('link_wsp');
   wspLink.href = wtspApi;
-  // BtnRRSS.addEventListener('click', () => wspApi());
-  // const fader = document.getElementById('fader');
-  // fader.classList.add("close");
-  // fader.style.display = 'none';
 }

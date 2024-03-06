@@ -13,7 +13,6 @@ const hiUser = () => {
 }
 
 window.addEventListener("load", () => {
-    // isSession();
     onLoadSite();
     hiUser();
   }

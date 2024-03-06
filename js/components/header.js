@@ -18,12 +18,12 @@ class Header extends HTMLElement {
       <header>
         <nav id="navBar" class="${this.classname}">
         <div class="header">
-        <a href="/index.html"><img src="assets/logo-fundacion.jpg" alt="Logo de la fundación" class="logo"></a>
+        <a id="url" href="/index.html"><img src="assets/logo-fundacion.jpg" alt="Logo de la fundación" class="logo"></a>
           <ul class="nav">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/services.html">Servicios</a></li>
-            <li><a href="/contact.html">Contacto</a></li>
-            <li><a href="/donate.hmtl">Donar</a></li>
+            <li><a id="url" href="/index.html">Inicio</a></li>
+            <li><a id="url" href="/servicios.html">Servicios</a></li>
+            <li><a id="url" href="/contacto.html">Contacto</a></li>
+            <li><a id="url" href="/donar.html">Donar</a></li>
           </ul>        
         </nav>
       </header>`;

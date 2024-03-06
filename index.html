@@ -1,43 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fundación Misael</title>
-  <script src="js/components/header.js"></script>
-  <link rel="stylesheet" href="css/style.css">
+   <meta charset="UTF-8">
+   <link rel="icon" sizes="16x16 32x32 48x48" type="image/ico" href="favicon.ico" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="js/components/header.js" type="text/javascript"></script>
+   <script src="js/components/ui/footer.js" type="text/javascript"></script>
+   <link href="css/style.css" rel="stylesheet" type="text/css">
+   <title>Contacto</title>
 </head>
 <body>
-  <div class="container">
-    <header-component></header-component>
-    <div class="banner">
-      <h1>Fundación Misael</h1>
-    </div>
-    <div class="main">
-      <div class="card">
-        <img src="img1.jpg" alt="Imagen 1">
-        <h3>Misión</h3>
-        <p>Ser una organización social que tiene por finalidad u objetivo la promoción del desarrollo integral de personas, familias, grupos y comunidades que viven en condiciones de necesidad de cualquier tipo, pobreza y/o marginalidad y espiritualidad.</p>
-        <a href="#">Más información</a>
-      </div>
-      <div class="card">
-        <img src="img2.jpg" alt="Imagen 2">
-        <h3>Visión</h3>
-        <p>Ser una fundación reconocida por su labor social, comprometida con los valores humanos y cristianos, que contribuye al bienestar y la transformación de la sociedad.</p>
-        <a href="#">Más información</a>
-      </div>
-      <div class="card">
-        <img src="img3.jpg" alt="Imagen 3">
-        <h3>Valores</h3>
-        <p>Nuestros valores son: la solidaridad, la fraternidad, la justicia, la paz, la esperanza, la fe, el amor, el respeto, la honestidad, la responsabilidad y la alegría.</p>
-        <a href="#">Más información</a>
-      </div>
-    </div>
-    <div class="footer">
-      <p>© 2024 Fundación Misael. Todos los derechos reservados.</p>
-    </div>
-  </div>
+    <loader-component></loader-component>
+    <header-component name="Fundación Misael"></header-component>
 
-  <script src="js/index.js"></script>
+        <div class="container text-center">
+            <h1 id="hello-user"></h1>
+            <p id="message-welcome" ></p>
+        </div>
+
+    <footer-component></footer-component>  
+    <script src="js/config/connection.js" type="text/javascript"></script>
+    <script src="js/helpers/functions.js" type="text/javascript"></script> 
+    <script src="js/index.js" type="text/javascript"></script> 
 </body>
 </html>

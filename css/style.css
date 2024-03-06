@@ -48,7 +48,7 @@
         align-items: center;
         justify-content: center;
         height: 500px;
-        background-image: url("/assets/banner.jpeg");
+        background-image: url("../assets/banner.jpeg");
         background-size: cover;
         background-position:  center;
       }

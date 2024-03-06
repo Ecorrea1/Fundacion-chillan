@@ -1,0 +1,160 @@
+@import 'loader.css';
+@import 'paginate.css';
+/* @import 'btnrrss.css'; */
+
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  /* font-weight: 300; */
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/oswald/v47/TK3IWkUHHAIjg75cFRf3bXL8LICs13Fv40pKlN4NNSeSASwcEWlWHYg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000000;
+  background: url(../assets/logo-fundacion.jpg) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: transparent !important;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  padding: 35px 2;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+h1 {
+   
+  align-items: center;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+  /* font-family: "Oswald"; */
+  font-weight: 400;
+}
+
+/* Estilo general para las imagenes */
+.img-logo {
+  border-radius: 10%;
+}
+
+.button-flout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px; 
+  height: 64px; 
+  background: #49C958 none repeat scroll 0% 0%;
+  color: white; 
+  border-radius: 32px;
+  position: fixed;
+  right: 18px; 
+  bottom: 45px; 
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 8px; 
+  z-index: 9999;
+  cursor: pointer;
+  font-weight: 600; 
+  transition: all 0.2s ease 0s; 
+  transform: scale(1);
+}
+  
+.button-flout img {
+  height: 40px; 
+  width: 40px; 
+  margin: 0; 
+  padding: 0;
+}
+
+.fader{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.fader .message{
+  color: #FFD600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: message 1s alternate infinite ease-in-out
+}
+
+.container-search{
+  width: 85%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.btn-ingreso{
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.btn{
+  margin-left: 2px;
+  background-color: black;
+  border-color: #FFD600;
+  color: white;
+  border-radius: 2rem;
+}
+
+.close{
+  opacity: 0;
+  transition: 1.5;
+}
+
+.hidden{
+  overflow: hidden;
+}
+
+@media screen and (max-width: 480px) {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-search input{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .container-search select{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .container-search button{
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+}
